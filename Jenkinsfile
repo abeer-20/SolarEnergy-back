@@ -1,6 +1,6 @@
 pipeline{
     environment {
-        imagename = "abeerab/backimage"
+        imagename = "abeerab/backendimage"
         registryCredential = "dockerhub_credentials"
         scannerHome = tool name: 'sonarqube-scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
         // scannerHome = tool 'sonarqube-scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
