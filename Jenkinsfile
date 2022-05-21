@@ -1,6 +1,6 @@
 pipeline{
     environment {
-        imagename = "saifromdhane/solarenergy_back"
+        imagename = "abeerab/backimage"
         registryCredential = "dockerhub_credentials"
         scannerHome = tool name: 'sonarqube-scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
         // scannerHome = tool 'sonarqube-scanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
@@ -17,7 +17,7 @@ pipeline{
                     sh "${scannerHome}/bin/sonar-scanner \
                         -Dsonar.projectKey=solarenergy-backend \
                         -Dsonar.sources=. \
-                        -Dsonar.host.url=http://15.236.24.79:9000/ \
+                        -Dsonar.host.url=http://54.217.252.229:9000/ \
                         -Dsonar.login=admin \
                         -Dsonar.password=admin"
                     } 
