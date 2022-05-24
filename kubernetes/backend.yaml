@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: saifromdhane/solarenergy_back:latest
+          image: abeerab/backendimage:latest
           ports:
             - containerPort: 5000
           env:
