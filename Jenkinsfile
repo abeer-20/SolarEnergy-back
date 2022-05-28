@@ -19,7 +19,7 @@ pipeline{
                         -Dsonar.sources=. \
                         -Dsonar.host.url=http://54.217.252.229:9000/ \
                         -Dsonar.login=admin \
-                        -Dsonar.password=admin"
+                        -Dsonar.password=user"
                     } 
                 }
             }
