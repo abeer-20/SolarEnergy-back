@@ -14,6 +14,26 @@ app.use(cors());
 // get images
 app.use('/img-uploads', express.static(path.join(__dirname, '../', '/img-uploads')));
 app.use('/client-imgs', express.static(path.join(__dirname, '../', '/client-imgs')));
+const Person = require('./models/userModel');
+const bcrypt = require('bcrypt');
+const createAdminAccount = async () => {
+  try {
+    const hashedPassword = await bcrypt.hash('123456789', 10);
+    await Person.create({
+      name: 'saif',
+      username: 'saif',
+      email: 'saif@gmail.com',
+      password: hashedPassword,
+      role: 'admin',
+    });
+    return console.log('user created');
+  } catch (error) {
+    return;
+  }
+};
+createAdminAccount();
+
+
 //routes
 app.use('/api/user', require('./routes/userRoute'));
 app.use('/api/project', require('./routes/projectRoute'));
