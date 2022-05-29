@@ -44,11 +44,11 @@ pipeline{
         }
         stage("deployment"){
             steps {
-                withCredentials([
-                string(credentialsId: 'k8s', variable: 'api_token')
-                ]) {
-                sh 'kubectl --token $api_token --server http://192.168.49.2:42477 --insecure-skip-tls-verify=true apply -f ./kubernetes '
-                }
+                // withCredentials([
+                // string(credentialsId: 'k8s', variable: 'api_token')
+                // ]) {
+                // sh 'kubectl --token $api_token --server http://192.168.49.2:42477 --insecure-skip-tls-verify=true apply -f ./kubernetes '
+                // }
             }
         }
     }
