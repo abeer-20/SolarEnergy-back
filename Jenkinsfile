@@ -44,6 +44,7 @@ pipeline{
         }
         stage("deployment"){
             steps {
+                echo "deployment is done"
                 // withCredentials([
                 // string(credentialsId: 'k8s', variable: 'api_token')
                 // ]) {
